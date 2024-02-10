@@ -9,11 +9,23 @@
             li {
                 color: tomato;
             }
+            #fruits-title {
+                color: black;
+            }
+            .important-places{
+                color: blueviolet;
+            }
         </style>
     </head>
     <body>
         <header>
             <h1>Welcome to my DOM</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Suscipit modi delectus placeat? Rem iste eius nihil excepturi
+                iure expedita aliquid, eos quasi tempore autem sunt sequi
+                facere! Ad, modi harum.
+            </p>
         </header>
         <main>
             <h1>My Awesome DOM de baba</h1>
@@ -23,23 +35,43 @@
                 <li>Bonobash</li>
                 <li>DOM de re baba</li>
             </ul>
-            <ul>
-                <li>Apple</li>
-                <li>Banana</li>
-                <li>Carrot</li>
-            </ul>
+            <section>
+                <h1 id="fruits-title">Fruits I like</h1>
+                <ul>
+                    <li>Apple</li>
+                    <li>Banana</li>
+                    <li>Carrot</li>
+                </ul>
+            </section>
+            <section>
+                <h1 id="places-title">Place I like to visit</h1>
+                <ul>
+                    <li class="important-places">shundarbon</li>
+                    <li class="important-places">bandarbon</li>
+                    <li class="important-places">katabon</li>
+                    <li class="other-place">shalbon</li>
+                </ul>
+            </section>
         </main>
         <script src="js/dom.js"></script>
         <script>
             const liCollection = document.getElementsByTagName("li");
             //   console.log(liCollection);
             for (const li of liCollection) {
-                console.log(li.innerText);
+                // console.log(li.innerText);
             }
 
             const allHeadings = document.getElementsByTagName("h1");
             for (const h1 of allHeadings) {
-                console.log(h1.innerText);
+                // console.log(h1.innerText);
+            }
+
+            const fruitsTitle = document.getElementById('fruits-title');
+            fruitsTitle.innerText = 'Fruits change by js';
+
+            const places = document.getElementsByClassName('important-places');
+            for(const place of places){
+            console.log(place.innerText);
             }
         </script>
     </body>
