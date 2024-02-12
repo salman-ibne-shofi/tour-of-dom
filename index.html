@@ -12,7 +12,7 @@
             #fruits-title {
                 color: black;
             }
-            .important-places{
+            .important-places {
                 color: blueviolet;
             }
         </style>
@@ -27,18 +27,20 @@
                 facere! Ad, modi harum.
             </p>
         </header>
-        <main>
+        <main id="main-container">
             <section>
-            <h1>My Awesome DOM de baba</h1>
-            <ul>
-                <li>jalali set</li>
-                <li>Shafayey</li>
-                <li>Bonobash</li>
-                <li>DOM de re baba</li>
-            </ul>
+                <h1>My Awesome DOM de baba</h1>
+                <ul>
+                    <li>jalali set</li>
+                    <li>Shafayey</li>
+                    <li>Bonobash</li>
+                    <li>DOM de re baba</li>
+                </ul>
             </section>
             <section class="fruits-container">
-                <h1 id="fruits-title" class="some-class random-class blue-bg">Fruits I like</h1>
+                <h1 id="fruits-title" class="some-class random-class blue-bg">
+                    Fruits I like
+                </h1>
                 <ul>
                     <li>Apple</li>
                     <li>Banana</li>
@@ -47,7 +49,7 @@
             </section>
             <section id="places-container" class="large-text">
                 <h1 id="places-title">Place I like to visit</h1>
-                <ul>
+                <ul id="places-list">
                     <li class="important-places">shundarbon</li>
                     <li class="important-places">bandarbon</li>
                     <li class="important-places">katabon</li>
@@ -57,6 +59,7 @@
         </main>
         <script src="js/dom.js"></script>
         <script src="js/styleInJs.js"></script>
+        <script src="js/append.js"></script>
         <script>
             const liCollection = document.getElementsByTagName("li");
             //   console.log(liCollection);
@@ -70,20 +73,20 @@
             }
 
             // option-2: getElementById
-            const fruitsTitle = document.getElementById('fruits-title');
-            fruitsTitle.innerText = 'Fruits change by js';
+            const fruitsTitle = document.getElementById("fruits-title");
+            fruitsTitle.innerText = "Fruits change by js";
 
             // option-3: getElementsByClassName
-            const places = document.getElementsByClassName('important-places');
-            for(const place of places){
-            // console.log(place.innerText);
+            const places = document.getElementsByClassName("important-places");
+            for (const place of places) {
+                // console.log(place.innerText);
             }
 
             // option-4: querySelector
             // option-5: querySelectorAll
-            const someLi = document.querySelectorAll('.fruits-container li');
+            const someLi = document.querySelectorAll(".fruits-container li");
             console.log(someLi);
-            for(const li of someLi){
+            for (const li of someLi) {
                 // console.log(li.innerText);
             }
         </script>
